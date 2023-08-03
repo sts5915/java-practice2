@@ -27,6 +27,7 @@ public class Ex01 {
 			add+= ++x;
 		}
 		System.out.println(add);
+		
 	}
 
 }
