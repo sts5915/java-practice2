@@ -1,30 +1,33 @@
-package IO;
+package practice;
 
-import java.io.*;
 public class Ex01 {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// 컴퓨터의 키보드, 파일, 네트워크 등으로 입력을 하여
-		// 컴퓨터의 메모리에 저장되면 콘솔, 파일, 네트워크 등을 통해 출력
-		// 데이터들은 2진수로 이루어진 바이트로 전달이 되어진다.
-		// 이러한 입출력을 실행하기 위해서 자바에서는 Stream이 사용된다
 		
-		InputStream input = System.in;
-		// InputStream 은 1바이트 처리 스트림이다.
-		// 영어 대소문자, 숫자, 특수문자만 처리할 수 있다. 한글 처리 x
+		// "이몽룡"과	"성춘향"은
+		// 사랑하는 사이다.
 		
-		System.out.print("키코드 입력하고 엔터 : ");
+		// 이 글을 String 변수에 담고 출력해보기
+		// (이스케이프 문자사용)
 		
+		String str = "\"이몽룡\"과\t\"성춘향\"은\n사랑하는 사이다.";
+		System.out.println(str);
 		
-		int keyCode = input.read();
-		System.out.println("keyCode : " +(char) keyCode);
+		// 정수 65을 byte 타입 변수에 저장후 아스키 문자로 출력하기
+		byte ascii = 65;
+		System.out.println((char)ascii);
 		
-		keyCode = input.read(); //엔터값 읽어오기
-		System.out.println("keyCode : " + keyCode);
+		// 다음 while문에서 한줄코드로만 작성
+		// 1부터 10까지 숫자를 더하는 식 완성하기
+		// 55
+		int x = 0;
+		int add = 0;
+		while(x<10) {
+			add+= ++x;
+		}
+		System.out.println(add);
 		
-		keyCode = input.read(); // 엔터값 읽어오기
-		System.out.println("keyCode : " + keyCode);
 	}
 
 }
